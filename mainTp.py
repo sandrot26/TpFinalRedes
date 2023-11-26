@@ -141,9 +141,9 @@ class MainProgram:
         value = self.dbh.consulta_especifica(date, currency_type)
 
         if value is not None:
-            print(f"Valor para id_moneda {currency_type} en la fecha {date} (equivausd): {value}")
+            print(f"Valor para moneda {currency_type} en la fecha {date} (equivausd): {value}")
         else:
-            print(f"No hay datos disponibles para id_moneda {currency_type} en la fecha {date}.")
+            print(f"No hay datos disponibles para moneda {currency_type} en la fecha {date}.")
 
 
     def consulta_rango(self):
@@ -156,26 +156,26 @@ class MainProgram:
         values = self.dbh.consulta_rango(start_date, end_date, currency_type)
 
         if values:
-            print(f"Valores para id_moneda {currency_type} en el rango de fechas {start_date} a {end_date}:")
+            print(f"Valores para moneda {currency_type} en el rango de fechas {start_date} a {end_date}:")
             for value in values:
                 print(f"Fecha: {value['fecha']}, EquivaUSD: {value['equivausd']}, EquivaPeso: {value['equivapeso']}")
         else:
-            print(f"No hay datos disponibles para id_moneda {currency_type} en el rango de fechas {start_date} a {end_date}.")
+            print(f"No hay datos disponibles para moneda {currency_type} en el rango de fechas {start_date} a {end_date}.")
 
 
     def diferencia(self):
         start_date = input("Ingrese la fecha de inicio (dd/mm/aaaa): ")
         end_date = input("Ingrese la fecha de fin (dd/mm/aaaa): ")
         print("\nPeso: 1, Real: 2, Dólar estadounidense: 3, Peso Chileno: 4")
-        currency_type = int(input("Ingrese el id_moneda: "))
+        currency_type = int(input("Ingrese el moneda: "))
 
         # Llamar a la función correspondiente de la base de datos
         diff = self.dbh.diferencia(start_date, end_date, currency_type)
 
         if diff is not None:
-            print(f"Diferencia porcentual para id_moneda {currency_type} entre {start_date} y {end_date}: {diff:.2f}%")
+            print(f"Diferencia porcentual para moneda {currency_type} entre {start_date} y {end_date}: {diff:.2f}%")
         else:
-            print(f"No hay datos disponibles para id_moneda {currency_type} en el rango de fechas {start_date} a {end_date}.")
+            print(f"No hay datos disponibles para moneda {currency_type} en el rango de fechas {start_date} a {end_date}.")
 
 
     def servidor(self):
