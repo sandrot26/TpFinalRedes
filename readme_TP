@@ -1,0 +1,24 @@
+                                                            Trabajo práctico Integrador
+
+    Se debe realizar un programa en python utilizando POO y la librería request  que guarde en una tabla los datos de las monedas Peso, Peso chileno Real y Dolar estadounidense en todas sus cotizaciones, el tipo de moneda debe ir en otra tabla y ambas deben estar asociada por id_moneda.
+
+    Menú: 
+        Debe contener un método de menú para poder utilizar todos los métodos del programa
+
+- Métodos
+
+    - Debe tener un método que se llame histórico al que se le pasa un rango de fechas para levantar el histórico.
+
+    - Método de actualización que debe levantar desde la última fecha que se corrió hasta el momento en donde se corra.
+
+    - Método de consulta específica: Se le debe pasar como parámetro la fecha y el tipo de moneda y debe devolver el valor.
+
+    - Método de consulta por rango: Se le pasa como parámetro la fecha de inicio, la fecha de fin y el tipo de moneda en ese orden y debe devolver una lista con los valores.
+
+    - Metodo diferencia: Se le pasa como parámetro la fecha de inicio, la fecha de fin y el tipo de moneda en ese orden y debe devolver la diferencia entre los valores de esas dos fechas. ej : +5.63 o -2.52 siendo la diferencia porcentual.
+
+    - Método Servidor: Al ejecutar este método el programa ejecuta un servidor de sockets en el puerto 2345 que cuando se conecte un cliente debe recibir una fecha y debe devolver el valor de la moneda dólar estadounidense.
+
+    - Se debe realizar un programa cliente que permita mostrar el uso del método servidor el proyecto, ingresando la fecha por teclado como dd/mm/aaaa.
+
+    - Todo el codigo debe estar debidamente documentado dentro del codigo, se debe subir al repositorio con un readme.md indicando su uso, librerias e instalación y autoria.

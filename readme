@@ -1,0 +1,7 @@
+python -m venv venv
+.\venv\Scripts\activate
+
+pip install mysql-connector-python
+pip install requests
+pip install lxml
+pip install beautifulsoup4
